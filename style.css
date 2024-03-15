@@ -317,3 +317,40 @@ body {
   color: #fff;
   font-weight: 700;
 }
+
+/* ! SECTION ABOUT */
+.section-about {
+  background-color: #f8e7f0;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.about {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.about-description {
+  color: #444;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.about-img-box img {
+  box-shadow: 0px 19px 70px 0px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-heading span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
