@@ -94,6 +94,20 @@
   color: #fff;
 }
 
+.btn--secondary:link,
+.btn--secondary:visited {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn--secondary:hover,
+.btn--secondary:active {
+  background-color: #fff;
+  color: #000;
+  box-shadow: inset 0 0 0 3px #fff;
+  transition: all 0.3s;
+}
+
 .btn--full:hover,
 .btn--full:active {
   background-color: #930f51;
@@ -107,4 +121,13 @@ hr {
 .section-hr {
   border: 1px solid #999;
   margin-bottom: 2rem;
+}
+
+/* ! Flex */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
 }
