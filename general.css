@@ -71,6 +71,16 @@
   margin-bottom: 1.6rem;
 }
 
+.titles {
+  font-size: 4.4rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.titles span {
+  font-weight: bold;
+}
+
 /* ! BUTTONS */
 
 .btn,
@@ -130,4 +140,15 @@ hr {
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+}
+
+/* ! GRIDS */
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
