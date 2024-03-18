@@ -354,3 +354,56 @@ body {
   font-size: 2.4rem;
   font-weight: 500;
 }
+
+/* ! SECTION TESTIMONIALS */
+.section-testimonials {
+  background: linear-gradient(transparent, #f8e7f0 75%);
+  padding: 4.8rem 0 9.6rem 0;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.gallery-text h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.gallery-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.gallery-items img {
+  max-width: 100%;
+}
+
+.feedback-text h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 3.2;
+  text-align: center;
+}
+
+.feedback-imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.feedback-imgs img {
+  max-width: 100%;
+  max-height: 100%;
+}
