@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,10 +30,29 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f1d0e0;
+
+  /* for sticky */
   height: 9.6rem;
   padding: 0 4.8rem;
   position: relative;
-  background-color: #f1d0e0;
+}
+
+/* Sticky navigation */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 9.6rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+.sticky .section-hero {
+  margin-top: 9.6rem;
 }
 
 .logo {
