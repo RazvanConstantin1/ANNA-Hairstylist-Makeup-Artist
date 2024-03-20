@@ -16,10 +16,11 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./general.css" />
+    <link rel="stylesheet" href="./queries.css" />
     <title>ANNA MAKEUP & HAIRSTYLIST</title>
   </head>
   <body>
-    <header id="home" class="header">
+    <header id="home" class="header nav-open hidden">
       <a href="#"
         ><img
           class="logo"
@@ -29,27 +30,24 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li>
-            <a class="main-nav-link" href="#">Home</a>
-          </li>
-          <li>
-            <a class="main-nav-link" href="#despre">Despre</a>
-          </li>
-          <li>
-            <a class="main-nav-link" href="#servicii">Servicii</a>
-          </li>
+          <li><a class="main-nav-link" href="#">Home</a></li>
+          <li><a class="main-nav-link" href="#despre">Despre</a></li>
+          <li><a class="main-nav-link" href="#servicii">Servicii</a></li>
           <li>
             <a class="main-nav-link" href="produse">Produse</a>
             <hr />
           </li>
-          <li>
-            <a class="main-nav-link" href="#galerie">Galerie</a>
-          </li>
+          <li><a class="main-nav-link" href="#galerie">Galerie</a></li>
           <li>
             <a class="main-nav-link btn btn--full" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -123,7 +121,7 @@
           <h2 class="heading-featured-in">
             Folosim doar produse profesionale de la brand-uri de top:
           </h2>
-          <div class="logos">
+          <div class="logos slide">
             <img src="./imgs/beauty-one Logo.png" alt="Beauty One Logo" />
             <img src="./imgs/medavidaLogo.png" alt="Medavida Logo" />
             <img
@@ -441,7 +439,7 @@
               />
             </a>
             <p class="footer-text">
-              <span class="year">2027</span> ANNA HAIRSTYLIST AND MAKEUP ARTIST
+              <span class="year">2024</span> ANNA HAIRSTYLIST AND MAKEUP ARTIST
             </p>
             <br />
             <a class="copyright" href="#"><p>© Made By Razvan Constantin</p></a>

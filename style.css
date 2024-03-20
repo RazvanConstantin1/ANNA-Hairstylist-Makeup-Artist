@@ -1,29 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Cormorant", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
 /* ! NAVBAR */
 
 .header {
@@ -175,6 +149,24 @@ body {
   color: #930f51;
 }
 
+/* Mobile Nav */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* ! Featured In Section */
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -204,6 +196,9 @@ body {
   width: 10%;
   height: 1%;
 }
+
+/* TODO: add more logos */
+/* TODO: infinite horizantal scrolling */
 
 /* ! SERVICES SECTION */
 .section-services {
