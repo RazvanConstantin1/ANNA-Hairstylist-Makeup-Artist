@@ -34,6 +34,8 @@ obs.observe(sectionHeroEl);
 // MOBILE NAVIGATION
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
+const navLinks = document.querySelectorAll(".main-nav-link");
+
 if (headerEl.classList.contains("nav-open"))
   headerEl.classList.toggle("nav-open");
 
@@ -41,29 +43,8 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
-// Smooth Scrolling animation
-const allLinks = document.querySelectorAll("a:link");
-
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
-
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
-
-    // Close mobile navigation when link clicked
-
+navLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
   });
