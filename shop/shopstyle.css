@@ -1,0 +1,176 @@
+/* ! General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cormorant", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  overflow-x: hidden;
+}
+
+hr {
+  border: 1px solid #f1d0e0;
+}
+
+/* ! BUTTONS */
+
+/* ! NAVBAR */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.8rem;
+  background-color: #f1d0e0;
+
+  /* for sticky */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+
+/* Sticky navigation */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 9.6rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+.logo {
+  height: 12rem;
+}
+
+.search-box {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60rem;
+  padding: 0.2rem 1.2rem;
+  border-radius: 25px;
+  gap: 1.8rem;
+}
+
+.search-box input {
+  border-radius: 25px;
+  border: none;
+  padding: 1.8rem;
+  outline: none;
+  /* padding: 2.4rem; */
+  background-color: #fff;
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 100%;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff;
+  border-radius: 25px;
+  color: #b81365;
+  width: 4rem;
+  height: 4rem;
+}
+
+.bi {
+  font-size: 3rem;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 0.6rem; */
+}
+
+/* ! Secondary Nav */
+.secondary-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.nav-list {
+  max-width: 120rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1.8rem;
+  list-style: none;
+  padding: 2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  padding: 0 1rem;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: #b81365;
+  padding: 1.8rem 1rem;
+  border-radius: 25px;
+}
+
+/* ! Section Background */
+.section-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  max-width: 120rem;
+  max-height: 120rem;
+  padding: 4.8rem 4.8rem;
+}
+
+.background img {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0px 15px 50px 0px rgba(0, 0, 0, 1);
+}
+
+/* ! Section Products */
+
+.section-products {
+  max-width: 150rem;
+  max-height: 120rem;
+  padding: 3.2rem 0rem 2.4rem 3.2rem;
+}
+
+.heading-secondary {
+  font-weight: 400;
+  color: #333;
+  letter-spacing: -0.5px;
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-bottom: 4.8rem;
+}
