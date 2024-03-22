@@ -172,5 +172,69 @@ hr {
   letter-spacing: -0.5px;
   font-size: 3.6rem;
   line-height: 1.2;
-  margin-bottom: 4.8rem;
+}
+
+/* ! Section items */
+.items {
+  max-width: 300rem;
+  padding: 2.4rem 4.8rem;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  border: 2px solid #999;
+  min-width: 20rem;
+  min-height: 40rem;
+  padding: 2.4rem;
+}
+
+.item-img {
+  width: 100%;
+}
+
+.item-name {
+  font-size: 2.4rem;
+  letter-spacing: 1;
+}
+
+.item-description {
+  color: #888;
+  font-size: 1.4rem;
+}
+
+.item-price {
+  font-size: 2.4rem;
+}
+
+.item-price span {
+  font-size: 3rem;
+}
+
+.add-to-cart,
+.add-to-cart:link,
+.add-to-cart:visited {
+  background-color: #b81365;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.4rem 2.8rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.add-to-cart:hover,
+.add-to-cart:active {
+  background-color: #930f51;
 }
