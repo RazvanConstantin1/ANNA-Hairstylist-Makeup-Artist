@@ -1,34 +1,74 @@
 [
   {
-    "nume": "Blondie - HOME",
-    "titlu": "sampon",
-    "categorie": "blonde",
-    "descriere": "Colour-enhancing shampoo that is ideal for warm blondes.",
-    "preț": 15.99,
-    "imagine": "../shop/imgs/item-img-test.jpeg"
+    "id": 1,
+    "name": "Blondie - A",
+    "title": "sampon",
+    "category": "culoare",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 10,
+    "image": "../shop/imgs/item-img-test.jpeg"
   },
   {
-    "nume": "Blondie - HOME",
-    "titlu": "sampon",
-    "categorie": "blonde",
-    "descriere": "Colour-enhancing shampoo that is ideal for warm blondes.",
-    "preț": 15.99,
-    "imagine": "../shop/imgs/item-img-test.jpeg"
+    "id": 2,
+    "name": "Blondie - B",
+    "title": "masca",
+    "category": "stralucire",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.C",
+    "price": 20,
+    "image": "../shop/imgs/item-img-test.jpeg"
   },
   {
-    "nume": "Blondie - HOME",
-    "titlu": "sampon",
-    "categorie": "blonde",
-    "descriere": "Colour-enhancing shampoo that is ideal for warm blondes.",
-    "preț": 15.99,
-    "imagine": "../shop/imgs/item-img-test.jpeg"
+    "id": 3,
+    "name": "Blondie - C",
+    "title": "masca",
+    "category": "reconstructie",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 30,
+    "image": "../shop/imgs/item-img-test.jpeg"
   },
   {
-    "nume": "Blondie - HOME",
-    "titlu": "sampon",
-    "categorie": "blonde",
-    "descriere": "Colour-enhancing shampoo that is ideal for warm blondes.",
-    "preț": 15.99,
-    "imagine": "../shop/imgs/item-img-test.jpeg"
+    "id": 4,
+    "name": "Blondie - D",
+    "title": "sampon",
+    "category": "hranire",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 40,
+    "image": "../shop/imgs/item-img-test.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Blondie - E",
+    "title": "masca",
+    "category": "reparare",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 50,
+    "image": "../shop/imgs/item-img-test.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Blondie - F",
+    "title": "sampon",
+    "category": "sebo reglatoare",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 60,
+    "image": "../shop/imgs/item-img-test.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Blondie - G",
+    "title": "masca",
+    "category": "styling",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 70,
+    "image": "../shop/imgs/item-img-test.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Blondie - H",
+    "title": "sampon",
+    "category": "blonde",
+    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "price": 80,
+    "image": "../shop/imgs/item-img-test.jpeg"
   }
 ]
