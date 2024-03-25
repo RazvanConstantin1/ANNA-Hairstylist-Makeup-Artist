@@ -95,7 +95,7 @@
 }
 
 .follow-us {
-  max-width: 15rem;
+  max-width: 14rem;
   max-height: 10rem;
   display: flex;
   justify-content: center;
@@ -117,7 +117,7 @@
   color: #555;
 }
 .ionicons-link:hover,
-.ionicons-link {
+.ionicons-link:active {
   color: #a6115b;
 }
 
