@@ -105,13 +105,13 @@ hr {
 }
 
 .contact-text:link,
-.contact-text:active {
+.contact-text:visited {
   font-size: 1.4rem;
   color: #333;
   text-decoration: none;
 }
 .contact-text:hover,
-.contact-text:visited {
+.contact-text:active {
   color: #a6115b;
 }
 
