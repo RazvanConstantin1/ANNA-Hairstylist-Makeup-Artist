@@ -1,9 +1,14 @@
 "use strict";
 let shop = document.getElementById("shop");
+let cartActive = document.getElementById("cart-active");
 const categoryButtons = document.querySelectorAll(".category-btn");
 const btnEl = document.querySelector(".search-btn");
 const inputEl = document.querySelector(".form-control");
+const displayCatEl = document.querySelector(".display-cat");
+const cartQuantity = document.querySelector(".cart-quantity");
+const addToCartEl = document.querySelector(".add-to-cart");
 
+// ! Fetching section + filter by category + search by name or type
 // get products
 const shopItemsData = fetch("./products.json")
   .then((response) => response.json())
@@ -70,6 +75,10 @@ const shopItemsData = fetch("./products.json")
             return products;
           }
         });
+
+        // Display category name on click
+        displayCatEl.textContent = `${category}`;
+
         console.log(productCategory);
         displayProducts(productCategory);
       });
@@ -95,3 +104,43 @@ const shopItemsData = fetch("./products.json")
     });
   })
   .catch((error) => console.error("Error loading JSON file", error));
+
+// ! Cart Section
+const cartIconEl = document.getElementById("#cart-icon");
+const cartEl = document.querySelector(".cart");
+const closeCartEl = document.querySelector("#close-cart");
+const cartBoxEl = document.querySelector(".cart-box");
+
+// Closing cart on reload
+if (cartEl.classList.contains("active")) cartEl.classList.toggle("active");
+// Open Cart
+cartIconEl.addEventListener("click", function () {
+  cartEl.classList.toggle("active");
+});
+// Close Cart
+closeCartEl.addEventListener("click", function () {
+  cartEl.classList.toggle("active");
+});
+
+// Add to cart
+
+// Cart Working
+if (document.readyState == "loading") {
+  document.addEventListener("DOMContentLoaded", ready);
+} else {
+  ready();
+}
+
+function ready() {
+  // Remove items from cart
+  const removeCartButtons = document.querySelectorAll(".cart-remove");
+  console.log(removeCartButtons);
+
+  for (let i = 0; i < removeCartButtons.length; i++) {
+    let button = removeCartButtons[i];
+    button.addEventListener("click", removeCartItem);
+  }
+}
+function removeCartItem() {
+  cartBoxEl.remove();
+}
