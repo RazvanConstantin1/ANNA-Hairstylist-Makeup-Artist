@@ -1,5 +1,66 @@
 /* ! Mobile Nav */
 
+/* BELOW 1344px */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/* BELOW 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .icon,
+  .title-icon,
+  .number-icon {
+    font-size: 3.2rem;
+  }
+  .cards-container {
+    max-width: 120rem;
+  }
+  .cards-container h3 {
+    font-size: 2.4rem;
+  }
+  .overlay {
+    height: 100%;
+  }
+  .overlay p {
+    font-size: 1.4rem;
+  }
+  .box-area {
+    margin-top: 3.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .about {
+    gap: 0;
+  }
+
+  .about-img {
+    max-width: 85%;
+  }
+
+  .feedback-imgs {
+    max-width: 90rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Below 944 */
 @media (max-width: 59em) {
   html {
     font-size: 50%;
@@ -55,5 +116,109 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 7.2rem;
+    padding: 0 8rem;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 70%;
+  }
+
+  .customers,
+  .wrapper-follow-us {
+    justify-content: center;
+  }
+}
+
+/* BELOW 704px */
+@media (max-width: 44em) {
+  html {
+    font-size: 44%;
+  }
+  .hero-img {
+    width: 75%;
+  }
+  h3 {
+    margin-bottom: 2.4rem;
+  }
+  .box-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7.2rem;
+  }
+  .box {
+    max-width: 50rem;
+  }
+  .overlay h3 {
+    font-size: 3rem;
+  }
+  .overlay p {
+    font-size: 1.8rem;
+  }
+
+  .container-shop {
+    grid-template-columns: 1fr;
+  }
+  .btn-shop {
+    text-align: center;
+  }
+  .shop-img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 7.2rem;
+  }
+
+  .about-img {
+    width: 50%;
+  }
+  .about-text-box {
+    text-align: center;
+  }
+}
+
+/* BELOW 544px */
+@media (max-width: 34em) {
+  html {
+    font-size: 37.5%;
+  }
+  .hero {
+    padding: 0 4.4rem;
+  }
+  .hero-img {
+    width: 85%;
+  }
+  .container {
+    padding: 0;
+  }
+  .box {
+    max-width: 40rem;
+  }
+  .shop-img {
+    width: 85%;
+  }
+  .about-img {
+    min-width: 60%;
+  }
+  .contact {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .feedback-imgs {
+    grid-template-columns: 1fr;
+    max-width: 75%;
   }
 }

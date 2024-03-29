@@ -93,9 +93,6 @@ const shopItemsData = fetch("./products.json")
     });
 
     // ! Cart Section
-
-    // add to cart
-    const addToCartBtn = document.querySelectorAll(".add-to-cart");
   })
   .catch((error) => console.error("Error loading JSON file", error));
 
