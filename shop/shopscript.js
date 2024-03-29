@@ -5,21 +5,25 @@ const categoryButtons = document.querySelectorAll(".category-btn");
 const btnEl = document.querySelector(".search-btn");
 const inputEl = document.querySelector(".form-control");
 const displayCatEl = document.querySelector(".display-cat");
-const cartQuantity = document.querySelector(".cart-quantity");
-const addToCartEl = document.querySelector(".add-to-cart");
+const itemBox = document.querySelector(".item-box");
 
+let listOfProducts = [];
+console.log(listOfProducts);
+
+let basket = [];
 // ! Fetching section + filter by category + search by name or type
 // get products
 const shopItemsData = fetch("./products.json")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-
+    listOfProducts.push(...data);
     // Display Products
     function displayProducts(products) {
       shop.innerHTML = products
         .map((product) => {
           let { id, name, price, description, image } = product;
+
           return ` 
       <div id="product-id-${id}" class="item-box">
       <img class="item-img" src="${image}" alt="product image" />
@@ -34,7 +38,7 @@ const shopItemsData = fetch("./products.json")
     }
 
     // get Random products
-    function randomProducts(displayRandomProducts) {
+    function randomProducts() {
       const randomProducts = [];
       while (randomProducts.length < 4) {
         const randomIndex = Math.floor(Math.random() * data.length);
@@ -45,24 +49,9 @@ const shopItemsData = fetch("./products.json")
       console.log(randomProducts);
 
       // display Random products
-      function displayRandomProducts(randomProducts) {
-        shop.innerHTML = randomProducts
-          .map((product) => {
-            let { id, name, price, description, image } = product;
-            return ` 
-        <div id="product-id-${id}" class="item-box">
-        <img class="item-img" src="${image}" alt="product image" />
-        <h3 class="item-name">${name}</h3>
-        <p class="item-description">${description}</p>
-        <h3 class="item-price"><span>${price} </span> RON</h3>
-        <a class="add-to-cart">Adauga in cos</a>
-      </div>
-        `;
-          })
-          .join("");
-      }
-      displayRandomProducts(randomProducts);
+      displayProducts(randomProducts);
     }
+
     randomProducts();
 
     // Filter by category
@@ -102,17 +91,23 @@ const shopItemsData = fetch("./products.json")
         console.log(searchCategory);
       }
     });
+
+    // ! Cart Section
+
+    // add to cart
+    const addToCartBtn = document.querySelectorAll(".add-to-cart");
   })
   .catch((error) => console.error("Error loading JSON file", error));
 
-// ! Cart Section
-const cartIconEl = document.getElementById("#cart-icon");
+// ! SideBar Cart Section
 const cartEl = document.querySelector(".cart");
+const cartIconEl = document.querySelector(".cart-icon");
 const closeCartEl = document.querySelector("#close-cart");
 const cartBoxEl = document.querySelector(".cart-box");
 
 // Closing cart on reload
 if (cartEl.classList.contains("active")) cartEl.classList.toggle("active");
+
 // Open Cart
 cartIconEl.addEventListener("click", function () {
   cartEl.classList.toggle("active");
@@ -121,8 +116,6 @@ cartIconEl.addEventListener("click", function () {
 closeCartEl.addEventListener("click", function () {
   cartEl.classList.toggle("active");
 });
-
-// Add to cart
 
 // Cart Working
 if (document.readyState == "loading") {
