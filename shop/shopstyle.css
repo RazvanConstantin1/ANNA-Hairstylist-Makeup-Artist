@@ -359,6 +359,19 @@ svg {
   right: 0;
   overflow: auto;
 }
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.5;
+  visibility: hidden;
+  cursor: pointer;
+  background: #888;
+  transition: all 0.3s;
+}
+
+.cart-overlay.show {
+  visibility: visible;
+}
 
 .cart-title {
   text-align: center;
