@@ -13,7 +13,7 @@ const selectors = {
   cartBody: document.querySelector(".cart-content"),
   cartItem: document.querySelector(".cart-box"),
   cartTotal: document.querySelector(".total-price"),
-  cartRemove: document.querySelector(".cart-remove"),
+  cartRemoveBtn: document.querySelector(".cart-remove"),
 };
 
 // ! Event Listeners
@@ -76,6 +76,7 @@ const increaseQty = (id) => {
 
   item.qty++;
 };
+
 const decreaseQty = (id) => {
   const item = cart.find((x) => x.id === id);
   if (!item) return;
@@ -83,6 +84,13 @@ const decreaseQty = (id) => {
   item.qty--;
 
   if (item.qty === 0) removeFromCart(id);
+};
+
+const deleteFromCartBtn = (id) => {
+  const item = cart.find((x) => x.id === id);
+  if (!item) return;
+
+  if (item) removeFromCart(id);
 };
 
 const updateCart = (e) => {
@@ -95,6 +103,7 @@ const updateCart = (e) => {
 
     btn === "incr" && increaseQty(id);
     btn === "decr" && decreaseQty(id);
+    btn === "delete" && deleteFromCartBtn(id);
 
     renderCart();
   }
@@ -104,7 +113,7 @@ const updateCart = (e) => {
 
 const renderCart = () => {
   // show cart total
-  selectors.cartTotal.textContent = calculateTotal();
+  selectors.cartTotal.textContent = calculateTotal() + " RON";
 
   // show cart items
   selectors.cartBody.innerHTML = cart
@@ -129,7 +138,7 @@ const renderCart = () => {
                 </div>
           </div>
           <!-- Remove cart -->
-          <i class="bi bi-trash3 cart-remove"></i>
+          <i class="bi bi-trash3 cart-remove" data-btn="delete"></i>
         </div>
        
     `;
