@@ -15,10 +15,11 @@ const selectors = {
   cartTotal: document.querySelector(".total-price"),
   cartRemoveBtn: document.querySelector(".cart-remove"),
   displayCatEl: document.querySelector(".display-cat"),
-  categoryButtons: document.querySelectorAll(".category-btn"),
   inputEl: document.querySelector(".form-control"),
   searchBtnEl: document.querySelector(".search-btn"),
   inputEl: document.querySelector(".form-control"),
+  cartAmount: document.querySelector(".cart-amount"),
+  categoryButtons: document.querySelectorAll(".category-btn"),
 };
 
 // ! Event Listeners
@@ -40,7 +41,8 @@ const setupListeners = () => {
 // ! Event Handlers
 
 const initStore = () => {
-  loadProducts("./products.json").then(renderProducts);
+  loadCart();
+  loadProducts("./products.json").then(renderProducts).finally(renderCart);
 };
 
 const showCart = () => {
@@ -64,7 +66,8 @@ const addToCart = (e) => {
     }
 
     cart.push({ id, qty: 1 });
-    // renderProducts();
+    saveCart();
+    renderProducts();
     renderCart();
     showCart();
   }
@@ -72,7 +75,7 @@ const addToCart = (e) => {
 
 const removeFromCart = (id) => {
   cart = cart.filter((x) => x.id !== id);
-
+  saveCart();
   renderProducts();
 };
 
@@ -110,14 +113,27 @@ const updateCart = (e) => {
     btn === "incr" && increaseQty(id);
     btn === "decr" && decreaseQty(id);
     btn === "delete" && deleteFromCartBtn(id);
-
+    saveCart();
     renderCart();
   }
+};
+
+// save cart to local storage
+const saveCart = () => {
+  localStorage.setItem("online-store", JSON.stringify(cart));
+};
+
+const loadCart = () => {
+  cart = JSON.parse(localStorage.getItem("online-store")) || [];
 };
 
 // ! Render Functions
 
 const renderCart = () => {
+  // show cart qty icon
+  selectors.cartAmount.textContent = cart.reduce((sum, item) => {
+    return sum + item.qty;
+  }, 0);
   // show cart total
   selectors.cartTotal.textContent = calculateTotal() + " RON";
 
