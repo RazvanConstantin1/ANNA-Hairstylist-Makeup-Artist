@@ -14,6 +14,11 @@ const selectors = {
   cartItem: document.querySelector(".cart-box"),
   cartTotal: document.querySelector(".total-price"),
   cartRemoveBtn: document.querySelector(".cart-remove"),
+  displayCatEl: document.querySelector(".display-cat"),
+  categoryButtons: document.querySelectorAll(".category-btn"),
+  inputEl: document.querySelector(".form-control"),
+  searchBtnEl: document.querySelector(".search-btn"),
+  inputEl: document.querySelector(".form-control"),
 };
 
 // ! Event Listeners
@@ -29,6 +34,7 @@ const setupListeners = () => {
   selectors.cartOverlay.addEventListener("click", hideCart);
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
+  selectors.searchBtnEl.addEventListener("click", searchInput);
 };
 
 // ! Event Handlers
@@ -58,7 +64,7 @@ const addToCart = (e) => {
     }
 
     cart.push({ id, qty: 1 });
-    renderProducts();
+    // renderProducts();
     renderCart();
     showCart();
   }
@@ -172,6 +178,73 @@ const renderProducts = () => {
       `;
     })
     .join("");
+};
+
+// Render Filtered Products
+const filteredProducts = (filteredProducts) => {
+  selectors.products.innerHTML = filteredProducts
+    .map((product) => {
+      const { id, name, price, description, image } = product;
+
+      // Check if the products is already in cart
+      const inCart = cart.find((x) => x.id === id);
+
+      // Make the add to cart button disabled if already in cart
+
+      const disabled = inCart ? "disabled" : "";
+
+      // Change the text if already in cart
+      const text = inCart ? "Adaugat in Cos" : "Adauga in Cos";
+
+      return `
+        <div  class="item-box" ">
+          <img class="item-img" src="${image}" alt="product image" />
+          <h3 class="item-name">${name}</h3>
+          <p class="item-description">${description}</p>
+          <h3 class="item-price"><span>${price} </span> RON</h3>
+          <a data-id="${id}" class="add-to-cart ${disabled}">${text}</a>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+// Filter by category
+selectors.categoryButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const category = e.target.dataset.id;
+    console.log(category);
+    const productCategory = products.filter(function (products) {
+      if (products.category === category) {
+        return products;
+      }
+    });
+
+    // Display category name on click
+    selectors.displayCatEl.textContent = `${category}`;
+
+    console.log(productCategory);
+    filteredProducts(productCategory);
+  });
+});
+
+// Search input
+const searchInput = () => {
+  let searchValue = selectors.inputEl.value;
+
+  if (searchValue !== "") {
+    let searchCategory = products.filter(function (products) {
+      if (products.type.includes(searchValue)) {
+        return products;
+      } else if (products.name.includes(searchValue)) {
+        return products;
+      }
+    });
+    if (searchCategory) {
+      filteredProducts(searchCategory);
+    }
+    console.log(searchCategory);
+  }
 };
 
 // ! Api Functions
