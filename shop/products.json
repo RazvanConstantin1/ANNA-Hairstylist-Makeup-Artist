@@ -1,74 +1,74 @@
 [
   {
     "id": 1,
-    "name": "Blondie - A",
+    "name": "SAMPON PROTECTIA CULORII – PH 5",
     "type": "sampon",
     "category": "Culoare / Par vopsit",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Protejeaza vopseaua si firul de par de actiunea soarelui si a agentilor atmosferici. Parul se mentine stralucitor, briliant , iar profunzimea si intensitatea culorii proaspat realizate, se mentine timp indelungat. Cuticula este hidratata si radianta. Imbogatit cu Amino Concentree. ",
     "price": 10,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON PROTECTIA CULORII – PH 5.png"
   },
   {
     "id": 2,
-    "name": "Blondie - B",
+    "name": "SAMPON CU ULEIURI CAPTIVANTE – PH 5.5",
     "type": "masca",
     "category": "Stralucire",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.C",
+    "description": "Sampon al splendorii, asigura o curatare echilibrata a scalpului si lasa parul extrem de hidratat si stralucitor.",
     "price": 20,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON CU ULEIURI CAPTIVANTE – PH 5.5.jpeg"
   },
   {
     "id": 3,
-    "name": "Blondie - C",
+    "name": "SAMPON RECONSTRUCTIV – PH 5.8",
     "type": "masca",
     "category": "Reconstructie",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Curata bland, in vreme ce reface substantele esentiale pentru compactarea cuticulei, lasand parul puternic, tonic si viguros. Contine beta-caroten, ce asigura tratamentul de reconstructie cosmetica si protejeaza parul de degradarea produsa de procese fiziologice (vopsire, imbatranire), procese chimice sau factori de mediu. Efect de reconstructie.",
     "price": 30,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON RECONSTRUCTIV – PH 5.8.png"
   },
   {
     "id": 4,
-    "name": "Blondie - D",
+    "name": "SAMPON NUTRITIV – PH 5.5",
     "type": "sampon",
     "category": "Hranire / Nutritiv",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Curata, in vreme ce hidrateaza si hraneste. Potoleste “setea” de hidratare a firului de par, formand un invelis pe lungimi si varfuri, pentru un par descurcat, matasos si stralucitor. Contine unt de Shea si guma de Guar. Imbogatit cu Amino Concentree.",
     "price": 40,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON NUTRITIV – PH 5.5.png"
   },
   {
     "id": 5,
-    "name": "Blondie - E",
+    "name": "SAMPON REGENERATOR – PH 5.5",
     "type": "masca",
     "category": "Reparare / Regenerare",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Sampon ce regenereaza si lasa parul foarte matasos. Curata bland, in timp ce hraneste intens si repara structura parului deteriorat, redandu-i puterea si stralucirea naturala. Contine lipozom Lifesaver (Leucina, Isoleucina, Valina, proteine hidrolizate din Grau, Creatina), Cyperus, Sacha inci, Linseed, Susan and Moringa oils si Panthenol.",
     "price": 50,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON REGENERATOR – PH 5.5.jpeg"
   },
   {
     "id": 6,
-    "name": "Blondie - F",
+    "name": "SAMPON ECHILIBRARE SEBUUM – PH 5.5",
     "type": "sampon",
     "category": "Sebo Reglatoare",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Acidul abietic si proteinele din Soia actioneaza in sinergie, determinand o actiune dermo-purificatoare, dermo-protectoare si hidratanta, eliminand, bland, excesul de sebuum. Ofera o senzatie de puritate, reduce disconfortul creat de iritatii si metine, pentru mult timp, scalpul purificat si parul curat. Extractul de Ghimbir, cu abilitatea sa deosebita de a lupta impotriva radicalilor liberi, previne subtierea parului, asigurand o curatare echilibrata. Parul este plin, tonic, cu volum.",
     "price": 60,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/SAMPON ECHILIBRARE SEBUUM – PH 5.5.png"
   },
   {
     "id": 7,
-    "name": "Blondie - G",
+    "name": "TWINE – SPUMA PENTRU CONTROLUL BUCLELOR",
     "type": "masca",
     "category": "Styling",
-    "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
+    "description": "Spuma linistitoare pentru bucle, strong hold. Creeaza bucle moi, usoare, voluptoase si ofera parului corp, structura si volum. Formula cu absorbtie rapida garanteaza bucle definite, dar elastice si saritoare. Contine ulei de Pequi si Rosa mosqueta.",
     "price": 70,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/TWINE – SPUMA PENTRU CONTROLUL BUCLELOR.jpeg"
   },
   {
     "id": 8,
-    "name": "Blondie - H",
+    "name": "BLONDIE - HOME Sunset Blonde Enhancing Shampoo",
     "type": "sampon",
     "category": "Blonde",
     "description": "Colour-enhancing shampoo that is ideal for warm blondes.Colour-enhancing shampoo that is ideal for warm blondes.",
     "price": 80,
-    "image": "../shop/imgs/item-img-test.jpeg"
+    "image": "../shop/imgs/products imgs/BLONDE - BLONDE SUNSET ENHANCING SHAMPOO.jpeg"
   }
 ]

@@ -352,6 +352,7 @@ svg {
 }
 
 /* ! Section cart */
+
 .cart {
   position: fixed;
   top: 0;
@@ -366,8 +367,9 @@ svg {
 
 .active {
   right: 0;
-  overflow: auto;
+  overflow-x: visible;
 }
+
 .cart-overlay {
   position: fixed;
   inset: 0;
@@ -407,6 +409,9 @@ svg {
   object-fit: contain;
   padding: 1rem;
 }
+/* .cart-content {
+  overflow-y: auto;
+} */
 .detail-box {
   display: grid;
   row-gap: 1.4rem;
