@@ -90,8 +90,12 @@ img {
   margin-top: 9.6rem;
 }
 
-.logo {
+#logo {
   height: 12rem;
+  width: 12rem;
+}
+.logo-contact {
+  display: flex;
 }
 
 .contact-shop {
@@ -100,7 +104,8 @@ img {
   justify-content: center;
   align-items: center;
   row-gap: 1.2rem;
-  margin-left: -15rem;
+
+  padding: 1.8rem 0;
 }
 .phone,
 .whatsapp {
@@ -128,7 +133,7 @@ img {
 
 .search-box {
   background-color: #fff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   min-width: 60rem;
@@ -137,13 +142,15 @@ img {
   gap: 1.8rem;
   margin-left: -10rem;
 }
+.open {
+  display: flex;
+}
 
 .search-box input {
   border-radius: 25px;
   border: none;
   padding: 1.8rem;
   outline: none;
-  /* padding: 2.4rem; */
   background-color: #fff;
   font-size: 1.6rem;
   height: 4rem;
@@ -159,6 +166,9 @@ img {
   color: #b81365;
   width: 4rem;
   height: 4rem;
+}
+.toggle-search-btn {
+  visibility: hidden;
 }
 
 .bi {

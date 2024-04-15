@@ -1,0 +1,11 @@
+/* BELOW 1200px */
+@media (max-width: 75em) {
+  .toggle-search-btn {
+    visibility: visible;
+  }
+
+  .contact-shop {
+    margin-left: 0;
+    padding: 1.8rem 0;
+  }
+}

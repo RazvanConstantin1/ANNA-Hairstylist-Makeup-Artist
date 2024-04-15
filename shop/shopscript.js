@@ -5,6 +5,7 @@ let cart = [];
 // ! Selectors
 const selectors = {
   products: document.querySelector(".shop"),
+  toggleSearchBtn: document.querySelector(".toggle-search-btn"),
   cartBtn: document.querySelector(".cart-icon"),
   cartQty: document.querySelector(".cart-amount"),
   cartClose: document.querySelector("#close-cart"),
@@ -36,6 +37,7 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.searchBtnEl.addEventListener("click", searchInput);
+  selectors.toggleSearchBtn.addEventListener("click", showSearchInput);
 };
 
 // ! Event Handlers
@@ -43,6 +45,10 @@ const setupListeners = () => {
 const initStore = () => {
   loadCart();
   loadProducts("./products.json").then(renderProducts).finally(renderCart);
+};
+const showSearchInput = () => {
+  const searchBox = document.querySelector(".search-box");
+  searchBox.classList.toggle("open");
 };
 
 const showCart = () => {
