@@ -11,6 +11,15 @@
   .search-box {
     display: none;
   }
+  .secondary-nav {
+    justify-content: flex-start;
+  }
+  .nav-list {
+    display: none;
+  }
+  .mobile-cattegory-btn {
+    display: flex;
+  }
 }
 
 /* TODO: work on responsive input, watch the hide/show cart */

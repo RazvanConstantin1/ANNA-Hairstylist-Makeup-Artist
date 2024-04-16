@@ -17,12 +17,17 @@ const selectors = {
   cartRemoveBtn: document.querySelector(".cart-remove"),
   displayCatEl: document.querySelector(".display-cat"),
   inputEl: document.querySelector(".form-control"),
-  mobileInputEl: document.querySelector(".mobile-form-control"),
   searchBtnEl: document.querySelector(".search-btn"),
-  mobileSearchBtnEl: document.querySelector(".mobile-search-btn"),
   inputEl: document.querySelector(".form-control"),
   cartAmount: document.querySelector(".cart-amount"),
   categoryButtons: document.querySelectorAll(".category-btn"),
+
+  // Mobile
+  mobileInputEl: document.querySelector(".mobile-form-control"),
+  mobileSearchBtnEl: document.querySelector(".mobile-search-btn"),
+  categoryOverlay: document.querySelector(".category-overlay"),
+  mobileCategoryButton: document.querySelector(".mobile-cattegory-btn"),
+  mobileNavList: document.querySelector(".mobile-nav-list"),
 };
 
 // ! Event Listeners
@@ -39,8 +44,13 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.searchBtnEl.addEventListener("click", searchInput);
-  selectors.mobileSearchBtnEl.addEventListener("click", searchInputMobile);
+
+  // Mobile
   selectors.toggleSearchBtn.addEventListener("click", showSearchInput);
+  selectors.mobileSearchBtnEl.addEventListener("click", searchInputMobile);
+  selectors.mobileCategoryButton.addEventListener("click", showCategories);
+  selectors.mobileNavList.addEventListener("click", closeCategories);
+  selectors.categoryOverlay.addEventListener("click", closeCategories);
 };
 
 // ! Event Handlers
@@ -52,6 +62,15 @@ const initStore = () => {
 const showSearchInput = () => {
   const searchBox = document.querySelector(".mobile-search-input");
   searchBox.classList.toggle("open");
+};
+
+const showCategories = () => {
+  selectors.mobileNavList.classList.add("open");
+  selectors.categoryOverlay.classList.add("show");
+};
+const closeCategories = () => {
+  selectors.mobileNavList.classList.remove("open");
+  selectors.categoryOverlay.classList.remove("show");
 };
 
 const showCart = () => {

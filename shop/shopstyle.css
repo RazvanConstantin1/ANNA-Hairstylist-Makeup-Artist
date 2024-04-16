@@ -196,9 +196,6 @@ img {
   height: 4rem;
   width: 100%;
 }
-.open {
-  display: flex;
-}
 
 .bi {
   font-size: 3rem;
@@ -276,6 +273,24 @@ svg {
   list-style: none;
   padding: 2rem;
 }
+.mobile-nav-list {
+  max-width: 120rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.8rem;
+  list-style: none;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 36rem;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #000;
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  transition: all 0.3s;
+}
 
 .nav-link:link,
 .nav-link:visited {
@@ -291,6 +306,24 @@ svg {
   background-color: #b81365;
   padding: 1.8rem 1rem;
   border-radius: 25px;
+}
+/* Mobile */
+.category-overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0.5;
+  visibility: hidden;
+  cursor: pointer;
+  background: #888;
+  transition: all 0.3s;
+}
+.show {
+  visibility: visible;
+}
+
+.mobile-cattegory-btn {
+  display: none;
+  align-items: center;
 }
 
 /* ! Section Background */
@@ -543,4 +576,10 @@ svg {
   font-size: 2rem;
   color: #000;
   cursor: pointer;
+}
+
+/* Reusable */
+.open {
+  display: flex;
+  left: 0;
 }
