@@ -17,7 +17,9 @@ const selectors = {
   cartRemoveBtn: document.querySelector(".cart-remove"),
   displayCatEl: document.querySelector(".display-cat"),
   inputEl: document.querySelector(".form-control"),
+  mobileInputEl: document.querySelector(".mobile-form-control"),
   searchBtnEl: document.querySelector(".search-btn"),
+  mobileSearchBtnEl: document.querySelector(".mobile-search-btn"),
   inputEl: document.querySelector(".form-control"),
   cartAmount: document.querySelector(".cart-amount"),
   categoryButtons: document.querySelectorAll(".category-btn"),
@@ -37,6 +39,7 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.searchBtnEl.addEventListener("click", searchInput);
+  selectors.mobileSearchBtnEl.addEventListener("click", searchInputMobile);
   selectors.toggleSearchBtn.addEventListener("click", showSearchInput);
 };
 
@@ -47,7 +50,7 @@ const initStore = () => {
   loadProducts("./products.json").then(renderProducts).finally(renderCart);
 };
 const showSearchInput = () => {
-  const searchBox = document.querySelector(".search-box");
+  const searchBox = document.querySelector(".mobile-search-input");
   searchBox.classList.toggle("open");
 };
 
@@ -253,6 +256,23 @@ selectors.categoryButtons.forEach((button) => {
 // Search input
 const searchInput = () => {
   let searchValue = selectors.inputEl.value;
+
+  if (searchValue !== "") {
+    let searchCategory = products.filter(function (products) {
+      if (products.type.includes(searchValue)) {
+        return products;
+      } else if (products.name.includes(searchValue)) {
+        return products;
+      }
+    });
+    if (searchCategory) {
+      filteredProducts(searchCategory);
+    }
+    console.log(searchCategory);
+  }
+};
+const searchInputMobile = () => {
+  let searchValue = selectors.mobileInputEl.value;
 
   if (searchValue !== "") {
     let searchCategory = products.filter(function (products) {
