@@ -55,16 +55,20 @@ body {
   color: #555;
   overflow-x: hidden;
 }
-svg {
-  width: 100%;
-  height: 100%;
+.bi {
+  font-size: 5.5rem;
+  color: #555;
+  position: relative;
+}
+.hide {
+  z-index: -1;
 }
 /* ! Container  */
 
 .container {
   /* 1140px */
-  max-width: 120rem;
-  padding: 0 3.2rem;
+  max-width: 300rem;
+  padding: 3.2rem;
   margin: 0 auto;
 }
 

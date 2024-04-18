@@ -14,6 +14,10 @@
     font-size: 56.25%;
   }
 
+  .header {
+    padding: 2.2rem;
+  }
+
   .heading-secondary {
     font-size: 3.6rem;
   }
@@ -60,9 +64,9 @@
 
 /* Below 944 */
 @media (max-width: 59em) {
-  html {
+  /* html {
     font-size: 50%;
-  }
+  } */
 
   .btn-mobile-nav {
     display: block;
@@ -119,7 +123,6 @@
   .hero {
     grid-template-columns: 1fr;
     gap: 7.2rem;
-    padding: 0 8rem;
   }
   .hero-text-box,
   .hero-img-box {
@@ -138,9 +141,9 @@
 
 /* BELOW 704px */
 @media (max-width: 44em) {
-  html {
+  /* html {
     font-size: 44%;
-  }
+  } */
   .hero-img {
     width: 75%;
   }
@@ -196,33 +199,49 @@
 
 /* BELOW 544px */
 @media (max-width: 34em) {
-  html {
-    font-size: 37.5%;
-  }
-  .hero {
-    padding: 0 4.4rem;
-  }
-  .hero-img {
-    width: 85%;
-  }
   .container {
-    padding: 0;
+    padding: 2.4rem;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.4rem 2.8rem;
+  }
+  .overlay p {
+    margin-bottom: 3.2rem;
   }
   .box {
-    max-width: 40rem;
+    min-width: 35rem;
+  }
+  .container-shop {
+    padding: 1.8rem;
   }
   .shop-img {
-    width: 85%;
+    width: 100%;
+  }
+  .section-about {
+    padding: 2.4rem 0;
   }
   .about-img {
-    min-width: 60%;
+    width: 100%;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .gallery-items {
+    grid-template-columns: 1fr;
+  }
+  .feedback-imgs {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
   .contact {
     flex-direction: column;
     gap: 3.2rem;
-  }
-  .feedback-imgs {
-    grid-template-columns: 1fr;
-    max-width: 75%;
   }
 }

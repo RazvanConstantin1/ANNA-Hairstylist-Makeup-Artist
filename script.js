@@ -36,16 +36,34 @@ const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 const navLinks = document.querySelectorAll(".main-nav-link");
 
-if (headerEl.classList.contains("nav-open"))
+if (headerEl.classList.contains("nav-open")) {
   headerEl.classList.toggle("nav-open");
-
+}
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  hiddenIcons();
 });
 
 navLinks.forEach(function (link) {
   link.addEventListener("click", function () {
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
+    cartIndexZ();
   });
 });
+
+// Hide cart when Cattegory shown //
+// TODO: Solve the icons visibility bug
+
+const followUsEl = document.querySelector(".follow-us");
+const hiddenIcons = () => {
+  if (headerEl.hasAttributes("nav-open")) {
+    followUsEl.classList.add("hide");
+  } else if (!headerEl.hasAttributes("nav-open")) {
+    followUsEl.classList.remove("hide");
+  }
+};
+
+const cartIndexZ = () => {
+  followUsEl.classList.remove("hide");
+};
