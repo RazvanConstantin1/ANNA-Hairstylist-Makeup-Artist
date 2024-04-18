@@ -186,6 +186,12 @@
   .about-text-box {
     text-align: center;
   }
+  .footer-section {
+    padding: 2.4rem;
+  }
+  .footer {
+    gap: 1.2rem;
+  }
 }
 
 /* BELOW 544px */

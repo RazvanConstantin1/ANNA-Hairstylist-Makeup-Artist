@@ -20,6 +20,7 @@ const selectors = {
   searchBtnEl: document.querySelector(".search-btn"),
   inputEl: document.querySelector(".form-control"),
   cartAmount: document.querySelector(".cart-amount"),
+  buyBtn: document.querySelector(".btn-buy"),
   categoryButtons: document.querySelectorAll(".category-btn"),
 
   // Mobile
@@ -44,6 +45,7 @@ const setupListeners = () => {
   selectors.cartClose.addEventListener("click", hideCart);
   selectors.cartBody.addEventListener("click", updateCart);
   selectors.searchBtnEl.addEventListener("click", searchInput);
+  selectors.buyBtn.addEventListener("click", buyAction);
 
   // Mobile
   selectors.toggleSearchBtn.addEventListener("click", showSearchInput);
@@ -51,6 +53,7 @@ const setupListeners = () => {
   selectors.mobileCategoryButton.addEventListener("click", showCategories);
   selectors.mobileNavList.addEventListener("click", closeCategories);
   selectors.categoryOverlay.addEventListener("click", closeCategories);
+  selectors.categoryOverlay.addEventListener("click", cartIndexZ);
 };
 
 // ! Event Handlers
@@ -67,6 +70,7 @@ const showSearchInput = () => {
 const showCategories = () => {
   selectors.mobileNavList.classList.add("open");
   selectors.categoryOverlay.classList.add("show");
+  hiddenCart();
 };
 const closeCategories = () => {
   selectors.mobileNavList.classList.remove("open");
@@ -144,6 +148,11 @@ const updateCart = (e) => {
     saveCart();
     renderCart();
   }
+};
+const buyAction = () => {
+  if (!cart.length <= 0) {
+    alert("Comanda dvs. a fost plasata! Multumim !");
+  } else return;
 };
 
 // save cart to local storage
@@ -269,6 +278,7 @@ selectors.categoryButtons.forEach((button) => {
 
     console.log(productCategory);
     filteredProducts(productCategory);
+    cartIndexZ();
   });
 });
 
@@ -335,6 +345,16 @@ const calculateTotal = () => {
     .reduce((sum, number) => {
       return sum + number;
     }, 0);
+};
+
+// Hide cart when Cattegory shown //
+const hiddenCart = () => {
+  if (selectors.cartOverlay.hasAttributes("show")) {
+    selectors.cartBtn.classList.add("hide-cart");
+  } else return;
+};
+const cartIndexZ = () => {
+  selectors.cartBtn.classList.remove("hide-cart");
 };
 
 // ! INITIALIZE
