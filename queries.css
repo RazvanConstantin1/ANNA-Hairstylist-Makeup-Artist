@@ -137,6 +137,13 @@
   .wrapper-follow-us {
     justify-content: center;
   }
+  .btn--secondary:link,
+  .btn--secondary:visited {
+    margin-top: 2.4rem;
+  }
+  .shop-text {
+    gap: 1.8rem;
+  }
 }
 
 /* BELOW 704px */
