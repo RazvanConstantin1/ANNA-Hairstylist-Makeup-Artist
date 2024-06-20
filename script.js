@@ -11,7 +11,6 @@ const sectionHeroEl = document.querySelector(".section-hero");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -81,7 +80,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.05,
+  threshold: 0.02,
 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
@@ -90,10 +89,15 @@ allSections.forEach(function (section) {
 
 // Loading imgs
 const imgTargets = document.querySelectorAll(".async-img");
-const imgObserver = new IntersectionObserver(_, {
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  observer.unobserve(entry.target);
+};
+const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
-  rootMargin: "200px",
+  rootMargin: "500px",
 });
 
 imgTargets.forEach((img) => imgObserver.observe(img));
